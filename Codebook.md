@@ -8,11 +8,10 @@ This file is codebook, describing the data/variables and transformations done in
  2. Read X_test.txt, y_test.txt and subject_test.txt from the "uci_har_dataset/test" folder and store.
  3. Concatenate and to generate data frames.
  4. Read the features.txt file from the "/uci_har_dataset" folder, store the data in a variable called *features*. We only extract the measurements on the mean and standard deviation. This results in a 66 indices list.
- 5. Clean the column names. We remove the "()"/"-" symbols in the names, make the first letter of "mean" and "std" a capital letter.
- 6. Read the activity_labels.txt file from the "./uci_har_dataset"" folder and store the data in a variable called *activity*.  
- 7. Clean the activity names in the second column of *activity*. We make rename them to camecase style. 
- 8. Transform the values of the dataset according to the *activity* data frame.  
- 9. Combine the X_data, Y_data, Z_data by column to get data frame, *cleaned*. Name the first two columns to "subject" and "activity". 
- 10. Write the *cleaned* out to "merged_clean_data.txt" file in "cleaned_data" directory.  
- 11. Finally, generate a second independent tidy data set with the average of each measurement for each activity and each subject. We have 30 unique subjects and 6 unique activities, which result in a 180 combinations of the two. Then, for each combination, we calculate the mean of each measurement with the corresponding combination. So, after initializing the *res* data frame and performing the two for-loops, we get a 180x68 data frame.
- 12. Write the *res* out to "dataset_w_averages.txt" file in current working directory.
+ 5. Read the activity_labels.txt file from the "./uci_har_dataset"" folder and store the data in a variable called *activity*.  
+ 6. Clean the activity names in the second column of *activity*.
+ 7. Transform the values of the dataset according to the *activity* data frame.  
+ 8. Combine the X_data, Y_data, Z_data by column to get data frame, *cleaned*. Name the first two columns to "subject" and "activity". 
+ 9. Write the *cleaned* out to "merged_clean_data.txt" file in "cleaned_data" directory.  
+ 10. Finally, generate a second independent tidy data set with the average of each measurement for each activity and each subject. We have 30 unique subjects and 6 unique activities, which result in a 180 combinations of the two. Then, for each combination, we calculate the mean of each measurement with the corresponding combination. So, after initializing the *res* data frame and performing the two for-loops, we get a 180x68 data frame.
+ 11. Write the *res* out to "dataset_w_averages.txt" file in current working directory.
